@@ -18,7 +18,7 @@ jobs:
             composer-
       - uses: php-actions/composer@v1
       - name: Run phpunit
-        run: vendor/bin/phpunit --coverage-clover=coverage/coverage.xml
+        run: vendor/bin/phpunit --testsuite unit --coverage-clover=coverage/coverage.xml
       - name: Upload code coverage artifact
         uses: actions/upload-artifact@v1
         with:
